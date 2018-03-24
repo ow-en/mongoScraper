@@ -1,0 +1,38 @@
+body {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.header,
+.marketing,
+.footer {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.header {
+  padding-bottom: 1rem;
+  border-bottom: .05rem solid white;
+}
+
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 3rem;
+}
+
+.footer {
+  padding-top: 1.5rem;
+  color: slategrey;
+  border-top: .05rem solid white;
+}
+
+@media (min-width: 48em) {
+  .container {
+    max-width: 73rem;
+  }
+}
+
+.container-narrow>hr {
+  margin: 2rem 0;
+}
