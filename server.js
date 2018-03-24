@@ -4,7 +4,6 @@ var bodyParser = require("body-parser");
 var logger = require("morgan");
 var mongoose = require("mongoose");
 
-const herokuURL = "https://radiant-harbor-70874.herokuapp.com/";
 mongoose.Promise = Promise;
 
 var app = express();
@@ -17,7 +16,7 @@ app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 app.use(express.static("public"));
 
-mongoose.connect("mongodb://" + herokuURL);
+mongoose.connect("mongodb://<dbuser>:<dbpassword>@ds123499.mlab.com:23499/heroku_qwjhfm1m");
 var db = mongoose.connection;
 
 db.on("error", function(error) {
