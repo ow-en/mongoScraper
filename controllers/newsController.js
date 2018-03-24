@@ -11,7 +11,7 @@ module.exports = function (app) {
     });
 
   app.get("/scrape", function(req, res) {
-    request("https://petapixel.com", function(error, response, html) {
+    request("https://washingtonpost.com", function(error, response, html) {
       var $ = cheerio.load(html);
       $(".post-excerpt").each(function(i, element) {
         var title = $(this)
