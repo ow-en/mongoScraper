@@ -42,7 +42,7 @@ module.exports = function (app) {
         }
       });
     });
-    res.redirect("/");
+    // res.redirect("/");
   });
   app.get("/articles", function(req, res) {
     Article
