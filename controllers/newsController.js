@@ -44,7 +44,7 @@ module.exports = function (app) {
     });
     res.redirect("/");
   });
-  app.get("articles", function(req, res) {
+  app.get("/articles", function(req, res) {
     Article
       .find({}, function(error, doc){
         if(error) {
