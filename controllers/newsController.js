@@ -7,7 +7,7 @@ module.exports = function (app) {
 
   app
     .get('/', function(req, res) {
-      res.redirect('/articles');
+      res.redirect('/scrape');
     });
 
   app.get("/scrape", function(req, res) {
@@ -42,7 +42,7 @@ module.exports = function (app) {
         }
       });
     });
-    // res.redirect("/");
+    res.redirect("/articles");
   });
   app.get("/articles", function(req, res) {
     Article
