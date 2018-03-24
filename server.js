@@ -16,9 +16,9 @@ app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 app.use(express.static("public"));
 
-const MONGO_URI = process.env.MONGO_URI || "mongodb://localhost:27017/mongoscraper"
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost:27017/mongoscraper"
 
-mongoose.connect(MONGO_URI);
+mongoose.connect(MONGODB_URI);
 var db = mongoose.connection;
 
 db.on("error", function(error) {
